@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+requests
+python-dotenv
+pyyaml
+tqdm
+networkx
