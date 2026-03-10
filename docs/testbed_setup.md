@@ -69,7 +69,7 @@ The experimental workflow follows these steps:
 
 ---
 
-## Notes
+### Notes
 
 This repository provides **configuration examples and sample alerts only**.
 
@@ -89,7 +89,7 @@ Example custom rules are provided in:
 
 configs/suricata/local.rules
 
-### Wazuh Configuration
+## Wazuh Configuration
 
 Wazuh is deployed as the host-based intrusion detection system (HIDS).
 
