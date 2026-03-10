@@ -1,1 +1,15 @@
+# --------------------------------------------------
+# Example Suricata Custom Rules
+# --------------------------------------------------
 
+# Detect possible port scanning activity
+alert tcp any any -> any any (msg:"IDS-TTP: Possible Port Scan Detected"; flags:S; threshold:type threshold, track by_src, count 20, seconds 5; sid:100001; rev:1;)
+
+# Detect SSH brute-force attempts
+alert tcp any any -> any 22 (msg:"IDS-TTP: Possible SSH Brute Force Attempt"; flow:to_server,established; threshold:type threshold, track by_src, count 5, seconds 60; sid:100002; rev:1;)
+
+# Detect suspicious HTTP request
+alert http any any -> any any (msg:"IDS-TTP: Suspicious HTTP GET Request"; content:"GET"; http_method; sid:100003; rev:1;)
+
+# Detect possible reverse shell behavior
+alert tcp any any -> any any (msg:"IDS-TTP: Potential Reverse Shell Connection"; flow:established; sid:100004; rev:1;)
