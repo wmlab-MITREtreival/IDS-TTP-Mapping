@@ -2,20 +2,6 @@
 
 This document describes the experimental environment used to generate IDS alerts and evaluate the IDS alert correlation framework.
 
-The setup consists of a controlled virtual laboratory where simulated attacks are launched against a victim host while IDS systems monitor the activity.
-
----
-
-## Virtual Environment
-
-The experiment is conducted using virtual machines.
-
-| Component | Description |
-|----------|-------------|
-| Virtualization | VirtualBox |
-| Attacker Machine | Kali Linux |
-| Target Machine | Ubuntu Linux |
-
 ---
 
 ## Intrusion Detection Systems
@@ -89,3 +75,17 @@ The experimental workflow follows these steps:
 This repository provides **configuration examples and sample alerts only**.
 
 The full experimental datasets and infrastructure configurations are not included for security and privacy reasons.
+
+## Suricata Configuration
+
+Suricata is configured as the network-based intrusion detection system (NIDS) in the experimental environment.
+
+Key configuration aspects include:
+
+- Monitoring network traffic on the victim host
+- Generating alerts in **EVE JSON format**
+- Using both default and custom detection rules
+
+Example custom rules are provided in:
+
+configs/suricata/local.rules
