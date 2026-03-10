@@ -1,1 +1,30 @@
+<!-- Example Wazuh Custom Rules -->
+
+<group name="ids-ttp-mapping">
+
+  <!-- Detect multiple failed SSH login attempts -->
+  <rule id="100001" level="8">
+    <if_sid>5716</if_sid>
+    <description>Multiple SSH authentication failures detected</description>
+  </rule>
+
+  <!-- Detect successful SSH login -->
+  <rule id="100002" level="5">
+    <if_sid>5715</if_sid>
+    <description>SSH login detected</description>
+  </rule>
+
+  <!-- Detect sudo privilege escalation attempt -->
+  <rule id="100003" level="10">
+    <match>sudo</match>
+    <description>Possible privilege escalation attempt using sudo</description>
+  </rule>
+
+  <!-- Detect suspicious command execution -->
+  <rule id="100004" level="7">
+    <match>bash</match>
+    <description>Suspicious shell command execution</description>
+  </rule>
+
+</group>
 
