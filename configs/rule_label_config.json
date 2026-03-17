@@ -1,0 +1,27 @@
+{
+  "high_risk_severity_values": [1, 2],
+  "trusted_threat_categories": [
+    "attempted-admin",
+    "trojan-activity",
+    "network-scan",
+    "successful-admin",
+    "web-application-attack",
+    "attempted-recon",
+    "misc-attack"
+  ],
+  "known_simulated_signature_ids": [
+    1000001,
+    1000002,
+    1000003,
+    2100498,
+    2200074
+  ],
+  "kill_chain_keywords": {
+    "reconnaissance": ["nmap", "scan", "enum", "masscan", "discovery"],
+    "initial_access": ["hydra", "brute force", "ssh login", "password guessing"],
+    "execution": ["reverse shell", "payload", "metasploit", "shellcode", "bash"],
+    "persistence": ["cron", "crontab", "scheduled task", "startup"],
+    "lateral_movement": ["psexec", "wmic", "smb", "ssh"],
+    "exfiltration": ["scp", "ftp upload", "dns tunnel", "covert channel", "exfiltration"]
+  }
+}
