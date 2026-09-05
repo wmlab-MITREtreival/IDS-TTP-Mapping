@@ -1,8 +1,15 @@
 pandas
 numpy
 scikit-learn
+torch
+transformers
+# CTI querying
 requests
+# Graph generation
+networkx
+matplotlib
+# Utilities
+tqdm
+# Optional – only needed if you add .env / YAML config loading
 python-dotenv
 pyyaml
-tqdm
-networkx
