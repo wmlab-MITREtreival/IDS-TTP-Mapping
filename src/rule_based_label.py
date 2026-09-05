@@ -85,7 +85,7 @@ def main():
     parser = argparse.ArgumentParser(description="Compliant rule-based IDS alert labeling")
     parser.add_argument("--input-csv", default="combined_ids_logs.csv")
     parser.add_argument("--output-csv", default="rule_labeled_ids_logs.csv")
-    parser.add_argument("--config-file", default="config/rule_label_config.json")
+    parser.add_argument("--config-file", default="configs/rule_label_config.json")
     args = parser.parse_args()
 
     df = pd.read_csv(args.input_csv)
