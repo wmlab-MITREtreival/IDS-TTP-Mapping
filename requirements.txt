@@ -10,6 +10,5 @@ networkx
 matplotlib
 # Utilities
 tqdm
-# Optional – only needed if you add .env / YAML config loading
 python-dotenv
 pyyaml
